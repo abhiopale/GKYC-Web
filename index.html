@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://hv-camera-web-sg.s3.ap-southeast-1.amazonaws.com/hyperverge-web-sdk@5.1.6/src/sdk.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <button type="“button”" onclick="starOnboarding()">
+        Start Onboarding
+      </button>
+    </div>
+  </body>
+  <script>
+    function starOnboarding() {
+      const accessToken =
+        "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY0MTY3NDExLCJleHAiOjE2NjQyNTM4MTEsImp0aSI6IjYwNWRiY2U2LWM2NTMtNGI0Zi1hZThiLTg2Y2NjMjhhN2I3OSJ9.aP7cj7n-87algU1rA9plGMyXEq8PFMJ2NZPTq81Jyz2mw3jRFSbw66Gf8J36rLqMyhcurPZWb1ifiioRJ9laWT3aQKTD3uWs2dhQAnutF8kORBHg6nljHsjByYGF99AYAFEGt1SAjEWndtKWpSL_znSc66TuIgHzB1sB3vs_JbI";
+      const hyperKycConfig = new HyperKycConfig(
+        accessToken,
+        "drivio-test",
+        "Abhi-testing"
+      );
+      // hyperKycConfig.setInputs({
+      //   ifsc: "BARB0DBNAND",
+      //   accountNumber: "78860100025770",
+      // });
+      const handler = (HyperKycResult) => {
+        console.log(HyperKycResult);
+      };
+      HyperKYCModule.launch(hyperKycConfig, handler);
+    }
+  </script>
+</html>
