@@ -24,8 +24,8 @@
       //   accountNumber: "78860100025770",
       // });
       const handler = (HyperKycResult) => {
-        alert(HyperKycResult);
-        console.log(HyperKycResult);
+        alert(HyperKycResult.status);
+        console.log(HyperKycResult.status);
       };
       HyperKYCModule.launch(hyperKycConfig, handler);
     }
