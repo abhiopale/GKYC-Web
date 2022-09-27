@@ -23,8 +23,8 @@
         Name: "Amar Madhavrao Ople",
       });
       const handler = (HyperKycResult) => {
-        alert(HyperKycResult.response.status);
-        console.log(HyperKycResult.status);
+        alert(HyperKycResult);
+        console.log(HyperKycResult);
       };
       HyperKYCModule.launch(hyperKycConfig, handler);
     }
