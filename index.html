@@ -19,10 +19,9 @@
         "crypto",
         "Abhi-testing-123456-12345"
       );
-      // hyperKycConfig.setInputs({
-      //   ifsc: "BARB0DBNAND",
-      //   accountNumber: "78860100025770",
-      // });
+      hyperKycConfig.setInputs({
+        Name: "Amar Madhavrao Ople",
+      });
       const handler = (HyperKycResult) => {
         alert(HyperKycResult.response.status);
         console.log(HyperKycResult.status);
