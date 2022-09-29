@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://hv-camera-web-sg.s3.ap-southeast-1.amazonaws.com/hyperverge-web-sdk@5.1.6/src/sdk.min.js"></script>
+    <script src="https://hv-camera-web-sg.s3.ap-southeast-1.amazonaws.com/hyperverge-web-sdk@demo/src/sdk.min.js"></script>
   </head>
   <body>
     <div>
@@ -13,18 +13,18 @@
   <script>
     function starOnboarding() {
       const accessToken =
-        "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY0MzQyMTc2LCJleHAiOjE2NjQ0Mjg1NzYsImp0aSI6IjQ2Zjc5ODdlLTQ3OGUtNDRjNS1hNTI0LTZjZDc5ODUzMDJkMCJ9.TmhQ4BRtCsnyri3csK1d_8yHH7QUQfhm4mY-Fi25P7KKVP3iHgpYXAXL_JjciVUtTavbiqWY4W-6DrFOmj7HYNQvvE30UKkVX_EC2Olq5FdrTFwdvpFsibmqnpmt8WeUbCE5BwPVar8-QCY4TocOohwwokkGmBZ2tgUxYkwL8_M";
+        "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY0NDIzNTc1LCJleHAiOjE2NjQ1MDk5NzUsImp0aSI6ImU4NjU3YTI4LWI4NzAtNGNmMC1hOTk4LTgzODhkMzA4MWEwNCJ9.SXb6i6KvnLZG2F6D3zQH84so81rb_0eesH2XBylsOpag-k7ohX-mLL34JhDoohYNMaIvZmpIfwC6HCu3LgIjr3LOc80HNFxVE9_eRbxmR9atFNw9lwr--oAbkADlrlRziy9fNw5Ahri720SXkKrJlzzgrhljp26ZzNY0pXDw8hM";
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "jai-kisan",
-        "testing-jaiKisan"
+        "drivio-test-2",
+        "testing-drivio-test"
       );
-      hyperKycConfig.setInputs({
-        idType: "pan",
-        fileNumber: "123",
-        dob: "123",
-        idNumber: "AEAPO3552M",
-      });
+      // hyperKycConfig.setInputs({
+      //   idType: "pan",
+      //   fileNumber: "123",
+      //   dob: "123",
+      //   idNumber: "AEAPO3552M",
+      // });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
