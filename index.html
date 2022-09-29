@@ -16,7 +16,7 @@
         "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY0NDIzNTc1LCJleHAiOjE2NjQ1MDk5NzUsImp0aSI6ImU4NjU3YTI4LWI4NzAtNGNmMC1hOTk4LTgzODhkMzA4MWEwNCJ9.SXb6i6KvnLZG2F6D3zQH84so81rb_0eesH2XBylsOpag-k7ohX-mLL34JhDoohYNMaIvZmpIfwC6HCu3LgIjr3LOc80HNFxVE9_eRbxmR9atFNw9lwr--oAbkADlrlRziy9fNw5Ahri720SXkKrJlzzgrhljp26ZzNY0pXDw8hM";
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "drivio-test-2",
+        "drivio-test",
         "testing-drivio-test"
       );
       // hyperKycConfig.setInputs({
@@ -34,13 +34,13 @@
           case "error":
             alert("error");
             break;
-          case "auto_approved":
+          case "approve":
             alert("approve");
             break;
-          case "auto_declined":
+          case "decline":
             alert("decline");
             break;
-          case "needs_review":
+          case "manualReview":
             alert("needs_review");
             break;
         }
