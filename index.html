@@ -15,15 +15,15 @@
       const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY0ODAzMDc4LCJleHAiOjE2NjQ4ODk0NzgsImp0aSI6IjI3YzgzODU0LTQ1MmYtNGQxMS05NjczLThhMzFlOWMwOGFhMCJ9.rtA8KpkXGEv6YRVFqIaJrl9ncApm-tzoSOeVHNGJ-x8E-7LcWX-N7Jsul3HylAtFlecIJOC3_dCaqjCprCEFB9uYL2oUn5yf2qch4AGq5d8U9gFQMUx1wzNw3FE8sp2Ga849OPnAdqKfduyCFKAlsnYkNGSOB9_j-l30-AEazmI"
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "Tata-DL",
-        "testing-tata-DL"
+        "jai-kisan",
+        "testing-jai-Kisan"
       );
-      // hyperKycConfig.setInputs({
-      //   idType: "pan",
-      //   fileNumber: "123",
-      //   dob: "123",
-      //   idNumber: "AEAPO3552M",
-      // });
+      hyperKycConfig.setInputs({
+        idType: "pan",
+        fileNumber: "123",
+        dob: "123",
+        idNumber: "AEAPO3552M",
+      });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
