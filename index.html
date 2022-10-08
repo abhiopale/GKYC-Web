@@ -12,18 +12,18 @@
   </body>
   <script>
     function starOnboarding() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY0ODU1NTc0LCJleHAiOjE2NjQ5NDE5NzQsImp0aSI6ImE2Y2NmMTU5LTQ1N2MtNDZmZC04N2Q1LTNhZDNjNjBlNDNhMCJ9.YjTjsIu4O8i6Gxadk5_F8xnza4Jep55CIlDRAFStX2-4nNMtk3OY06d3DSZfs2HB6q5mFWGiVqYY7lJ8RRLz0f3BwCGH0wJu466qx4M_jrTw3H3pMilBP5ZFLchyCrG78cs9i0sIt6ditZjgIn878G3pmH9BTFnL3vHr3PfrfUA"
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjBlYzEzYyIsImhhc2giOiJiMzRkNTdiNTU0ZDdkNTZmNDlmODNjMDgzZTI3YzhhZGVmOWI0NjczMjYyMzQ2MzNkMmJlMGQ2NTAzYTY5NGVmIiwiaWF0IjoxNjY1MjAwOTIxLCJleHAiOjE2NjUyODczMjEsImp0aSI6IjQzZjI1YTQ1LWNiNmYtNGM3NC05ZDhjLWJlYjdkYjQ4MWRhYSJ9.aNjsvFfVlvyEipBQ2sYBa3FDOnDHp9f8jIs5YNqWQcuQHF16CFNCqWNPTGl5LCzSvUUdHFN-KLVo7hGtanVHbRkqJ5Acm6lRJxhc_ntB4_QBGqNOd-dfB4QgJU1pL8yvdentCa4swmfn5YXjtRqMBPYFlnaui4BoqNijHKRnDVI"
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "jai-kisan",
-        "testing-jai-Kisan"
+        "digi-flow",
+        "testing-digilocker-flow"
       );
-      hyperKycConfig.setInputs({
-        idType: "pan",
-        fileNumber: "123",
-        dob: "123",
-        idNumber: "AEAPO3552M",
-      });
+//       hyperKycConfig.setInputs({
+//         idType: "pan",
+//         fileNumber: "123",
+//         dob: "123",
+//         idNumber: "AEAPO3552M",
+//       });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
