@@ -18,12 +18,9 @@
         "drivio-test",
         "testing-aadhar-Flow"
       );
-//       hyperKycConfig.setInputs({
-//         idType: "pan",
-//         fileNumber: "123",
-//         dob: "123",
-//         idNumber: "AEAPO3552M",
-//       });
+      hyperKycConfig.setInputs({
+        gstNumber: "29AADCH3483N1Z0",
+      });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
