@@ -13,16 +13,16 @@
   <script>
     let trancactionId = "abhi" + Math.random()
     function starOnboarding() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg2MWYxZiIsImhhc2giOiIwYjU2YjJkYjVmZTFkNzllNjQyNjk2ODVjMGY5ZTRlOTZmYzExYmFkZmMxNGNhMzgwNDc5MjcxYTg2NWZhNjQ5IiwiaWF0IjoxNjY4MTcyNjE5LCJleHAiOjE2NjgyNTkwMTksImp0aSI6ImJjYjY5NDk2LTUyZDQtNGMxMS05NmU0LTkwN2JkMDJlM2NhYiJ9.p9mPh2xHcVxpFY1wM3M-W6CpVxbcPzGRRqpjoJOJsAQFF5k9v5i-Kfxxxm2nIriMWEzbL1wTUXyi-iyowjT1wFpaZ70tbYdatqFRRNNIGVyT7yNxZSidX_m0Ut382Z8J64C1e7DqOSBOaJ_XmJjPpDAMA2C-TlvP7IfvI-2WSUY"
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY4NDI4OTM2LCJleHAiOjE2Njg1MTUzMzYsImp0aSI6IjU2MmY5NjA5LTZlNjQtNDQ2NS05ZmMyLWVhOWFmMmFkNzA5YyJ9.aDEmUI6ZctSVcoNiC9Ajdt4KQrN6UbSXDXcrHCpWbLcNipwVVjXrr9hEZOVWxLgKlJinUG_d-6JtA9NKotU6_nLOMR2N6-PgoYOome7qGynoixUyds0ZjlmzARby8RBpLy6BholILBQ8_kVdSjpsmyl4Xg2HvVRHH65H5xeTfwo"
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "CKYC-AML",
+        "digiFlow",
         trancactionId
       );
-      hyperKycConfig.setInputs({
-        id_number:"AEAPO3553M",
-        dob:"02-06-1999"
-      });
+//       hyperKycConfig.setInputs({
+//         id_number:"AEAPO3553M",
+//         dob:"02-06-1999"
+//       });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
