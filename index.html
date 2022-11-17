@@ -13,16 +13,15 @@
   <script>
     let trancactionId = "abhi" + Math.random()
     function starOnboarding() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg2MWYxZiIsImhhc2giOiIwYjU2YjJkYjVmZTFkNzllNjQyNjk2ODVjMGY5ZTRlOTZmYzExYmFkZmMxNGNhMzgwNDc5MjcxYTg2NWZhNjQ5IiwiaWF0IjoxNjY4NTEzODI0LCJleHAiOjE2Njg2MDAyMjQsImp0aSI6ImUxNmZjYmMzLTE1NDEtNDA4NC1iNDgxLTQ2NDExYWI2YzEzOCJ9.pHq3JOqwJbX_0RbtcK4fxpp-Q5yFiLzPJnoW8zLomQwnCenD3VuZXVXnU3hc56he-UQp7eB27hsiE1U_tiW8KXqKz0OGTlSI_iWdv9BGf86BDasyOATnhKgApBb1aYNNb3sME7NlZR77r7ocHvKXAx1sJc2MIzVHE6RtH96dQFA"
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY4NjY2NTY1LCJleHAiOjE2Njg3NTI5NjUsImp0aSI6ImY5YTFhNGNjLWQwZDAtNDdkYy1hZTYxLWU4NTRmYzMxYzA5ZSJ9.kx0Ed4s_P3eR7QbJtmH0IpBzB280ki8tpJIMHcvqR9hj_bzj1R5id_AnTvH6FCEG97TmxRUQ-NI_KMxamW-9KK1J__eMuq7iR0MGvH_QHDeT7YYPBMj7-Yd5iIHEUdZQUXC8WG3LOLa4ErEVB2pqWA2SmG_nonLPGxA9xq09oEU"
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "CKYC-Digilocker",
+        "xml-dbCheck",
         trancactionId
       );
       hyperKycConfig.setInputs({
-        idNo:"CUKPM9540B",
-        dob:"27-02-1997",
-        idType:"C"
+        ifsc: "BARB0DBNAND",
+        accountNumber : "78860100025770"
       });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
