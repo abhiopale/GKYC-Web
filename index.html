@@ -16,13 +16,13 @@
       const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY4NjY2NTY1LCJleHAiOjE2Njg3NTI5NjUsImp0aSI6ImY5YTFhNGNjLWQwZDAtNDdkYy1hZTYxLWU4NTRmYzMxYzA5ZSJ9.kx0Ed4s_P3eR7QbJtmH0IpBzB280ki8tpJIMHcvqR9hj_bzj1R5id_AnTvH6FCEG97TmxRUQ-NI_KMxamW-9KK1J__eMuq7iR0MGvH_QHDeT7YYPBMj7-Yd5iIHEUdZQUXC8WG3LOLa4ErEVB2pqWA2SmG_nonLPGxA9xq09oEU"
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "xml-dbCheck",
+        "acko",
         trancactionId
       );
-      hyperKycConfig.setInputs({
-        ifsc: "BARB0DBNAND",
-        accountNumber : "78860100025770"
-      });
+//       hyperKycConfig.setInputs({
+//         ifsc: "BARB0DBNAND",
+//         accountNumber : "78860100025770"
+//       });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
