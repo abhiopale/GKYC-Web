@@ -20,9 +20,10 @@
         trancactionId
       );
 //       hyperKycConfig.setInputs({
-//         ifsc: "BARB0DBNAND",
-//         accountNumber : "78860100025770"
-//       });
+        ifsc: "BARB0DBNAND",
+        accountNumber : "78860100025770",
+        name: "AMAR MADHAVRAO OPLE"
+      });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
