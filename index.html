@@ -13,17 +13,17 @@
   <script>
     let trancactionId = "abhi" + Math.random()
     function start() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjY5MTEwMzQxLCJleHAiOjE2NjkxOTY3NDEsImp0aSI6IjFhNGQ5MWE4LTAzNTctNGI4ZC1iYmEyLTM5MjA5NDczOGQ4NiJ9.VBUdCnLkRswv2pVKDXIpgk50Dk11I6RyQWfY1Qj32PzfwtOyyWK3NyeKmv5qcUGfXAwEksK3QLBkOVjAXmTX0Dfe2A9p_xT9DdQFAUsmlJRnuqiW8Eg71sFvuTqawIyJZf3G3mxfxeEboDYvY0WfNdzLbg_yQcaLsqCsVRpqBoU"
-      const hyperKycConfig = new HyperKycConfig(
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg2MWYxZiIsImhhc2giOiIwYjU2YjJkYjVmZTFkNzllNjQyNjk2ODVjMGY5ZTRlOTZmYzExYmFkZmMxNGNhMzgwNDc5MjcxYTg2NWZhNjQ5IiwiaWF0IjoxNjY5NjM4MTIzLCJleHAiOjE2Njk3MjQ1MjMsImp0aSI6IjJlNzZjZDY4LTk0ZGMtNGY2Zi05YjE3LTE4MjFhOGQ5OGZkYSJ9.TaSmFlOg-lDFWb4ZvbutwkADGT_CGB9S3wd9bgP8XfR-46w_T4T23tdQG5Rf8LQF0qw2m7pJC_CMi_9HF1rb6gx3TJNrRx8MFnA63nZLov0hEYo6SiIj_ilHvIUFCLs0RtAJ4KsAg800s93orvpL5nXCv0qLZM4lejT0FlLtsiU"
+       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "Tata-DL",
+        "KYB_FLOW",
         trancactionId
       );
-      hyperKycConfig.setInputs({
-        ifsc: "BARB0DBNAND",
-        accountNumber : "78860100025770",
-        name: "AMARMADHAVRAOOPLE"
-      });
+//       hyperKycConfig.setInputs({
+//         ifsc: "BARB0DBNAND",
+//         accountNumber : "78860100025770",
+//         name: "AMARMADHAVRAOOPLE"
+//       });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
         switch (HyperKycResult.status) {
