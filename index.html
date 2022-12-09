@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://hv-camera-web-sg.s3.ap-southeast-1.amazonaws.com/hyperverge-web-sdk@5.4.0/src/sdk.min.js"></script>
+    <script src="https://hv-camera-web-sg.s3.ap-southeast-1.amazonaws.com/hyperverge-web-sdk@demo/src/sdk.min.js"></script>
   </head>
   <body>
     <div>
@@ -13,8 +13,8 @@
   <script>
     let trancactionId = "abhi" + Math.random()
     function start() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg2MWYxZiIsImhhc2giOiIwYjU2YjJkYjVmZTFkNzllNjQyNjk2ODVjMGY5ZTRlOTZmYzExYmFkZmMxNGNhMzgwNDc5MjcxYTg2NWZhNjQ5IiwiaWF0IjoxNjcwNDc0MjYzLCJleHAiOjE2NzA1NjA2NjMsImp0aSI6IjhlYTU2NTc4LTI2ZDgtNGRiZi1hYWRjLTRkNjNlYTY0ZTU1ZSJ9.Zi8nsLEonQ1vp02h8bw7RfJhaKaleKBF16iEmwWmvgLdX7k70gcJldEahHuA1uSXU_ti6WZ91H86p02KS2RhoOGSrCj4VtZxa36GVHFNAb8jqH-5RXMTqpmXQPw4yVVQGkTOfI0PKd8l8S_Sf5fjzmlmy4eym_rjPP1-HGI7Fvk"
-      const hyperKycConfig = new HyperKycConfig(
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg2MWYxZiIsImhhc2giOiIwYjU2YjJkYjVmZTFkNzllNjQyNjk2ODVjMGY5ZTRlOTZmYzExYmFkZmMxNGNhMzgwNDc5MjcxYTg2NWZhNjQ5IiwiaWF0IjoxNjcwNTgwMDQzLCJleHAiOjE2NzA2NjY0NDMsImp0aSI6IjRiMGQzNTllLTkxNGMtNDRjZC1iYzdkLWU2YmMzMGZiNTI0NCJ9.RvT08Y13PDRHK6FjQw8s62YRsu4uloIr_VNkpyycJCvvx2jQl4fUFrASGixRmp_DQ-GU67M2fa9Yd80LyY3nWkzCt367i8OeXs7r9Vzg7dKA3d65KN4Clv28Gkjxn3B3RmzOWmA7rlMgmmXDl4moX8S5L-islYn31zli6m0Mmso"
+ const hyperKycConfig = new HyperKycConfig(
         accessToken,
         "tata-aia-indivisual-flow",
         trancactionId
