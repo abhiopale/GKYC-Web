@@ -13,10 +13,10 @@
   <script>
     let trancactionId = "abhi" + Math.random()
     function start() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjcxNTM2NDU4LCJleHAiOjE2NzE2MjI4NTgsImp0aSI6IjBiMWU1YTc3LTcxNjctNDQ1MC1hMDM3LWMyYWFlNjA5YzE3ZCJ9.D3jps8LdLbvGDZSGTyHwaKr4jH_-n-_x77QeqXty2g385gjMQgZ3o9hsQbsK308X9Ufn4VmIRJwBOJyfXrE9lqyQPM-PgrI7bK5attIJORsZg7mS6k9vbo8_vEWJByIm_loi9W9cD45NvHLpha279cLUmPon2mCC7I7RWr0YrG4"
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjU1YTNhNiIsImhhc2giOiIxZjQxMzU0ODhhNjc0OWU3OTFjMTA0MTRlNTQyYTU4MWY1MTU4YmI1NmU4ZDE2YWE0YzY2YmU1ZTY5MWY4YjlhIiwiaWF0IjoxNjcxNTQ2NTQxLCJleHAiOjE2NzE2MzI1NDEsImp0aSI6IjE0NjU5ZTFjLTkzYzEtNDVkNy04YmQ1LTI2ZjZiM2ZiYzI2YSJ9.rIoFbVBKL-aUpeQ3NjrqhbYduDcMnNc8F_7Af9-1FT9VGlkESfAyXO_WfP15aCMYYU8XfJmfkEqX1Y1LbNpCUtQaxdIILUC3-TEJEl7cZR799MHdRWPF_CoxI6eMSqiXaC_EC1ggW_cQPFEnclva5JcvyjURc3osEGFcReHy7v0"
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "acko",
+        "dynamicFormIdSelection",
         trancactionId
       );
       hyperKycConfig.setInputs({
