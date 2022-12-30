@@ -11,16 +11,16 @@
     </div>
   </body>
   <script>
-    let trancactionId = "HV-testing" + Math.random()
+    let trancactionId = "HV-testing-dedupe"
     function start() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImxkemZ6byIsImhhc2giOiI2ZGIyZTJhZGZmMzhiNmExZGE4MDQwZWY5YmE1NTI1ZjBiY2I4MDY0NzUxYjRkYThkMWFkM2Q3YzBkMTYzODU0IiwiaWF0IjoxNjcxNjQwODg5LCJleHAiOjE2NzE3MDA4ODksImp0aSI6ImEwYTdjMGRkLTQ4MmItNDA5Yi05MTQ4LTdkOWI2M2UzYTk0NSJ9.WKUD-NNizsHajfypgeD0b49MSPQsb002TP63H06SG7o4I623sRpyWJvESf-KSBkHN9gyaCFXkha4kCUj2fT8yPmDYQOpI35ETqC2tGXVHAiIZLSboO84djRtWzXWQ0_EMkGxgTPAwYrAOjaWn8dFKim3qZ8RazEXjMp2uzoIqMM" 
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjZjMDZiYyIsImhhc2giOiJhZWM4NDRhN2JlNmFmNTM2MTk2MGZiMTM0YzkwY2YwMGZkNDgyOTJjNjEwYzBkN2I2NWI2Yzg2YTNiMjAzNmI0IiwiaWF0IjoxNjcyNDEyOTQ5LCJleHAiOjE2NzI0OTkzNDksImp0aSI6ImM5YjQ2OTExLWQ2ZTItNDE1YS05MjI0LTIyNzg3YWVlZDQxMiJ9.VT55CHpHqw2yo3ApaldgeJlqjDyuOnAQYD3Np2lTOkIvrNayjWbiqsnUbVEBMh0setaos6IbGFdfpjoez0qQQWjVSXB_iAEHwzBzmqmRq84T_HmaNavNVHP_XitKadln-8XuTEUfN5Z7981Sk-NQecMnazAHt4S-NdDFyDub5R0"
       const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "ind_ckyc_digilocker_acko",
+        "dedupe-testing",
         trancactionId
       );
       hyperKycConfig.setInputs({
-      fullName : "ARCHIT BHANDARI"        
+      bvnNumber : "22209058143"        
  });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
