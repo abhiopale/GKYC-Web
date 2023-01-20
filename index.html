@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://hv-camera-web-sg.s3.ap-southeast-1.amazonaws.com/hyperverge-web-sdk@5.5.0/src/sdk.min.js"></script>
+    <script src="https://hv-camera-web-sg.s3.ap-southeast-1.amazonaws.com/hyperverge-web-sdk@6.1.0/src/sdk.min.js"></script>
   </head>
   <body>
     <div>
@@ -11,12 +11,12 @@
     </div>
   </body>
   <script>
-    let trancactionId = "HV_testing_3"
+    let trancactionId = "HV_testing_3" + Math.random().toString()
     function start() {
-      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjcyNDIxNzQ2LCJleHAiOjE2NzI1MDgxNDYsImp0aSI6IjliMzU2Njg2LTY0MDEtNGM0Yi05MzVhLTBkOTBlYzhkZmIxZCJ9.l3MKAZYqdupMXXl1S47mIlllvzRzomHPavQpnoMa2j5_QsT2IljQ9JzJk8WmJJo0hYntqm_IPFGYIqF9iTTvaz4LX1YQjkHke6OZCP8PN_qTkkH0smfV9M1xCqj5n5cNCu0YyStOVng7azxYPRb_wroZiHIymlsnY03XCDH5Exc"
-      const hyperKycConfig = new HyperKycConfig(
+      const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6InRkZHFmaCIsImhhc2giOiI1MzFmZmI0MGI3OGQ2Mzk1ZmFlNmM5MWIwZDhkM2E3OTk4YTU4MTBiOWZhNTAyNjJkODg0MmRkODQ4NTZhZmZhIiwiaWF0IjoxNjc0MjExNzU5LCJleHAiOjE2NzQyOTYzNTksImp0aSI6IjIzOWU0YjE4LTQ5ODQtNDMzNS1hZTllLTlhMDE4N2NlMGY5MSJ9.IpS4ytr9eOijExRRJudSDljqigyxaIg-xXWg2BHO_y8-h2rCtJEtd4OibViq2NNsGTNwXSM-pi2dMbEXbIDV-GwC2iRgh9aWqam1ii-OW4FVeZdbvJV8NGiiOPu1TH7KRHev2v4RBWtFU_BhkY2U9Wxq2uP2xtGpfAZ3iZ3UBfQ"
+     const hyperKycConfig = new HyperKycConfig(
         accessToken,
-        "dedupe-testing",
+        "oi",
         trancactionId
       );
       hyperKycConfig.setInputs({
