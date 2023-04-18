@@ -20,7 +20,17 @@
         trancactionId
       );
       hyperKycConfig.setInputs({
-      bvnNumber : "22209058143"        
+      pan: "GTRHU5846G",
+      dateOfDeclaration: "12-04-2023",
+      placeOfDeclaration: "Mumbai",
+      dateOfKYCVerification: "12-04-2023",
+      kycVerificationName: "Sandeep Kumar",
+      kycVerificationDesignation: "Manager",
+      kycVerificationBranch: "Mumbai",
+      kycVerificationEmpCode: "US4565",
+      constitutionType: "01",
+      branchCode: "1101",
+      accountType: "01"       
  });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
