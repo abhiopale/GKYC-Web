@@ -20,19 +20,16 @@
       return;
     }
 
-    const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Impwb2FpaCIsImhhc2giOiI3MDY1MjhlNTY1MzVmYTQzOGZkMjk1MWRiYTFiYzlkYTdmNGVjOWE4NGVhMDYxM2EzZGRmZmM2MmZiN2I0OTRhIiwiaWF0IjoxNjg2NTY1MTA5LCJleHAiOjE2ODY2NDk3MDksImp0aSI6ImRjODI0ZTk3LWJjM2UtNDFjMy1iZDJmLTM2MzEwZDVmY2Y4OCJ9.KmcJc5d9_xxjOMNxJvly1reqU_9cDJTXBYRFgYEyZL3_fQOY4wJueUb-8nqlNz4IncqvvC_EpCj7GJgdC2EpsYMcgjJ1YvnTJ2MI0nitnC_YvlnDN-Y7Dg1LpQ-Ky8lQrDk8OZcgPlM9oiJzKS0TNsY7cSYmjtzrwDz3szwqbJU"
-    const hyperKycConfig = new HyperKycConfig(
+    const accessToken = "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6ImxkemZ6byIsImhhc2giOiI2ZGIyZTJhZGZmMzhiNmExZGE4MDQwZWY5YmE1NTI1ZjBiY2I4MDY0NzUxYjRkYThkMWFkM2Q3YzBkMTYzODU0IiwiaWF0IjoxNjg2ODE5MjkyLCJleHAiOjE2ODY5MDM4OTIsImp0aSI6IjdmMDAxNzIwLWI4YmYtNGI0OC04M2Y0LTJlOWMyM2M3ZjY3OCJ9.EpsWfQa7ZRDh9fdOd7REAimdmSxvNteYkLJi8QogwUxWD1BOADwLnGme6bVNsJOBYmW7VfIyjhd0GrXUchizZk14hDSz7GH-KrgyFsgRwLmE7RksNLX5nF5OyYIoElkvVF2IGTmFUFaOgWC6hF97eOjYIF1_KLoMpK1uARN6Gq0"
+   const hyperKycConfig = new HyperKycConfig(
       accessToken,
-      "aadhaarEsign",
+      "ind_ckyc_digilocker_acko",
       transactionId
     );
       hyperKycConfig.setInputs({
-     name: "Gaurav Sharma",
-      signature: "NA",
-      email: "abhiopale@gmail.com",
-      date: "16-06-2023",
-      number: "9011221122",
-      newKyc: "yes"    
+fullName:"Amar Madhavrao Ople",
+    date:"16-06-2023",
+    phoneNumber:"9012111122"    
  });
       const handler = (HyperKycResult) => {
         console.log(HyperKycResult);
